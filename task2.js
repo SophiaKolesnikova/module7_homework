@@ -1,12 +1,10 @@
-const obj ={
-    name: 'Sam',
-    age: 12
-  }
-  function getProp(str, object){
-    if(obj.hasOwnProperty('name')){
-      console.log(true)
-    }else{
-      console.log(false)
-    }
-  }
-  getProp('name', obj)
+const userInfo ={
+  name: 'Sam',
+  age: 12
+}
+function getProp(str, obj){
+  return str in obj;
+}
+
+const result = getProp('name', userInfo) 
+console.log(result);
